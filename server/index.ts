@@ -9,6 +9,13 @@ import * as bodyParser from 'body-parser';
 const twilio = require('twilio');
 // let resp = new twilio.TwimlResponse();
 
+enum keys {
+  'up' = 2,
+  'left' = 4,
+  'right' = 6,
+  'down' = 8
+}
+
 
 const server = express();
 server.use(bodyParser.urlencoded({extended: false}));
@@ -18,7 +25,15 @@ server.get('/', (req, res) => {
 });
 
 server.post('/keyPress', (req, res) => {
-  console.log('req.body ', req.body);
+  console.log('req.body ', req.body.Digits);
+  const key = req.body.Digits;
+  if (keys[key]) {
+    console.log("IS KEY:", keys[key]);
+  } else {
+    console.log("NOT KEY");
+  }
+
+
   let twiml = new twilio.TwimlResponse();
   twiml.gather({
     numDigits: '1',
