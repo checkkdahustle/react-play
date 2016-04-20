@@ -2,5 +2,9 @@
 
 export default {
   sid: 'SK8e2a2b2a3373c7317bc2a756d309933b',
-  secret: 'Qd4Gc9cso7hbgj8wrZi0HQDR1xwDY905'
+  secret: 'Qd4Gc9cso7hbgj8wrZi0HQDR1xwDY905',
+  firebase: {
+    url: 'https://teleplay.firebaseio.com/',
+    key: 'WNGjsSr2Buk9xQEVXZ9PHKPDcgdjBAjVTl17mpZh'
+  }
 }
