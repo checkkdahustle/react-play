@@ -12,7 +12,7 @@ import Player from './components/player-component';
 class App extends React.Component {
   render() {
     return (
-      <div>I heard React was good. <Goat /><Player /></div>
+      <div><Player /></div>
     );
   }
 }
